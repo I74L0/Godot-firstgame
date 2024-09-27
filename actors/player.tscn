@@ -81,7 +81,9 @@ position = Vector2(-0.5, 7)
 shape = SubResource("RectangleShape2D_yqrpi")
 
 [node name="camera" type="Camera2D" parent="."]
-visible = false
+position = Vector2(1, 0)
+offset = Vector2(0, -50)
+zoom = Vector2(1.4, 1.4)
 limit_left = 0
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -93,6 +95,5 @@ editor_draw_drag_margin = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kwbtp")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.615622
