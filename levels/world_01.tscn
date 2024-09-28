@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cfpmen87g2xgg"]
+[gd_scene load_steps=20 format=4 uid="uid://cfpmen87g2xgg"]
 
 [ext_resource type="Texture2D" uid="uid://bh2us8a0sbrg5" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0l0xc"]
 [ext_resource type="Texture2D" uid="uid://bxancjrqn4lyi" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_ly4l6"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://blykrkdwvai5y" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_q3tau"]
 [ext_resource type="Texture2D" uid="uid://cfahxjrnqcxdd" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="8_05c7h"]
 [ext_resource type="PackedScene" uid="uid://cyi5bou2o7j4p" path="res://prefabs/moving_plataform.tscn" id="10_drkfc"]
+[ext_resource type="PackedScene" uid="uid://botjv1ofnybl" path="res://prefabs/coin.tscn" id="11_euyd0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_se8l2"]
 texture = ExtResource("1_0l0xc")
@@ -127,6 +128,24 @@ position = Vector2(-13, 159)
 tile_map_data = PackedByteArray("AAAFAP3/AQABAAEAAAD8/wAAAQABAAEAAAAIAAAAAQAFAAEAAAAMAAAAAQAJAAEAAAAPAAAAAQAFAAEAAAD5/wAAAQAJAAEAAAA=")
 tile_set = SubResource("TileSet_7js8a")
 
+[node name="coins" type="Node2D" parent="."]
+
+[node name="coin" parent="coins" instance=ExtResource("11_euyd0")]
+position = Vector2(72, 84)
+
+[node name="coin2" parent="coins" instance=ExtResource("11_euyd0")]
+position = Vector2(192, 76)
+
+[node name="coin3" parent="coins" instance=ExtResource("11_euyd0")]
+position = Vector2(264, 180)
+
+[node name="moving_plataform" parent="." instance=ExtResource("10_drkfc")]
+position = Vector2(192, 100)
+
+[node name="moving_plataform2" parent="." instance=ExtResource("10_drkfc")]
+position = Vector2(72, 116)
+move_horizontal = false
+
 [node name="player" parent="." instance=ExtResource("3_k4kl5")]
 position = Vector2(-148, 153)
 
@@ -178,9 +197,3 @@ motion_mirroring = Vector2(432, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_05c7h")
 centered = false
-
-[node name="moving_plataform" parent="." instance=ExtResource("10_drkfc")]
-position = Vector2(57, 47)
-
-[node name="moving_plataform2" parent="." instance=ExtResource("10_drkfc")]
-position = Vector2(-74, 78)

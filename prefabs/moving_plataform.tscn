@@ -10,6 +10,7 @@ size = Vector2(32, 16)
 script = ExtResource("1_jl6ws")
 
 [node name="plataform" type="AnimatableBody2D" parent="."]
+collision_layer = 2
 
 [node name="sprite_plataform" type="Sprite2D" parent="plataform"]
 texture = ExtResource("1_cmyri")
@@ -18,3 +19,4 @@ region_rect = Rect2(96, 64, 32, 16)
 
 [node name="collision" type="CollisionShape2D" parent="plataform"]
 shape = SubResource("RectangleShape2D_yi3kd")
+one_way_collision = true
