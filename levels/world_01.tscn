@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=4 uid="uid://cfpmen87g2xgg"]
+[gd_scene load_steps=22 format=4 uid="uid://cfpmen87g2xgg"]
 
 [ext_resource type="Texture2D" uid="uid://bh2us8a0sbrg5" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0l0xc"]
+[ext_resource type="Script" path="res://scripts/world_01.gd" id="1_pe4kp"]
 [ext_resource type="Texture2D" uid="uid://bxancjrqn4lyi" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_ly4l6"]
 [ext_resource type="PackedScene" uid="uid://cjne55in8jooq" path="res://actors/player.tscn" id="3_k4kl5"]
 [ext_resource type="Texture2D" uid="uid://cakk65m5w1mph" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_8bubj"]
@@ -129,6 +130,7 @@ shader_parameter/move_speed = 0.01
 
 [node name="World-01" type="Node2D"]
 position = Vector2(200, 100)
+script = ExtResource("1_pe4kp")
 
 [node name="ground" type="TileMapLayer" parent="."]
 position = Vector2(-8, 159)
@@ -210,8 +212,24 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_05c7h")
 centered = false
 
-[node name="enemy" parent="." instance=ExtResource("12_frf1n")]
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+offset = Vector2(0, -25)
+zoom = Vector2(1.4, 1.4)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="enemy" parent="enemies" instance=ExtResource("12_frf1n")]
 position = Vector2(273, 191)
 
-[node name="enemy2" parent="." instance=ExtResource("12_frf1n")]
+[node name="enemy3" parent="enemies" instance=ExtResource("12_frf1n")]
+position = Vector2(19, 191)
+
+[node name="enemy2" parent="enemies" instance=ExtResource("12_frf1n")]
 position = Vector2(96, 191)

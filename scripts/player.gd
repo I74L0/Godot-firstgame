@@ -4,8 +4,9 @@ extends CharacterBody2D
 const SPEED = 200.0
 const JUMP_FORCE = -400.0
 
-@onready var animation := $anim as AnimatedSprite2D
 var isJumping := false
+@onready var animation := $anim as AnimatedSprite2D
+@onready var remote_transform := $remote as RemoteTransform2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -37,3 +38,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 
 	move_and_slide()
+
+
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		queue_free()
+
+func follow_camera(camera):
+	var camera_path = camera.get_path()
+	remote_transform.remote_path = camera_path
