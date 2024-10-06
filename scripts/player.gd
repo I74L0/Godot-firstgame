@@ -46,15 +46,13 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_hurtbox_body_entered(body: Node2D) -> void:
-	#if body.is_in_group("enemies"):
-		#queue_free()
-		if player_life < 0:
-			queue_free()
-		else:
-			if $ray_right.is_colliding():
-				take_damage(Vector2(-200, -200))
-			if $ray_left.is_colliding():
-				take_damage(Vector2(200, -200))
+	if player_life < 0:
+		queue_free()
+	else:
+		if $ray_right.is_colliding():
+			take_damage(Vector2(-200, -200))
+		if $ray_left.is_colliding():
+			take_damage(Vector2(200, -200))
 			
 
 func follow_camera(camera):
@@ -66,5 +64,8 @@ func take_damage(knockback_force:= Vector2.ZERO, duration := 0.25):
 	
 	if knockback_force != Vector2.ZERO:
 		knockback_vetor = knockback_force
+		
 		var knockback_tween := get_tree().create_tween()
-		knockback_tween.tween_property(self, "knockback_vetor", Vector2.ZERO, duration)
+		knockback_tween.parallel().tween_property(self, "knockback_vetor", Vector2.ZERO, duration)
+		animation.modulate = Color(1, 0, 0, 1)
+		knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
