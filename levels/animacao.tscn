@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://4svsrlmbor1o"]
+
+[ext_resource type="Texture2D" uid="uid://uuvwiha4vwml" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="1_mfvnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mctp"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61ec3"]
+size = Vector2(230, 36.5)
+
+[node name="Animacao" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(21, 19)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(13, 4)
+texture = ExtResource("1_mfvnl")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_2mctp")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(101, 17)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(26, 6)
+texture = ExtResource("1_mfvnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+visible = false
+shape = SubResource("RectangleShape2D_2mctp")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2, 43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(123, 22.25)
+shape = SubResource("RectangleShape2D_61ec3")
