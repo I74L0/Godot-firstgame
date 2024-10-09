@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://4svsrlmbor1o"]
+[gd_scene load_steps=16 format=3 uid="uid://4svsrlmbor1o"]
 
+[ext_resource type="Script" path="res://levels/animacao/character_body_2d_2.gd" id="1_175d4"]
 [ext_resource type="Texture2D" uid="uid://uuvwiha4vwml" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="1_mfvnl"]
+[ext_resource type="Texture2D" uid="uid://cebwlq7q3037f" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_e2jo7"]
+[ext_resource type="Texture2D" uid="uid://ci68c1wj5bui1" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="3_leycg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mctp"]
 size = Vector2(12, 12)
@@ -8,24 +11,75 @@ size = Vector2(12, 12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61ec3"]
 size = Vector2(230, 36.5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp2pe"]
+atlas = ExtResource("2_e2jo7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5rwj"]
+atlas = ExtResource("2_e2jo7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr84n"]
+atlas = ExtResource("3_leycg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdx6p"]
+atlas = ExtResource("3_leycg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u03sp"]
+atlas = ExtResource("3_leycg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x65d"]
+atlas = ExtResource("3_leycg")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36wsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp2pe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5rwj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr84n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdx6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u03sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7x65d")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kski0"]
+size = Vector2(14, 14)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_84k1j"]
+a = Vector2(4, -6)
+b = Vector2(4, 16)
+
 [node name="Animacao" type="Node2D"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(21, 19)
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(13, 4)
-texture = ExtResource("1_mfvnl")
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-visible = false
-shape = SubResource("RectangleShape2D_2mctp")
+[node name="cutscene" type="AnimationPlayer" parent="."]
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 position = Vector2(101, 17)
+script = ExtResource("1_175d4")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
 position = Vector2(26, 6)
@@ -41,3 +95,23 @@ position = Vector2(2, 43)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(123, 22.25)
 shape = SubResource("RectangleShape2D_61ec3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(19, 20)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(12, 8)
+sprite_frames = SubResource("SpriteFrames_36wsb")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.756609
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(12, 16)
+shape = SubResource("RectangleShape2D_kski0")
+
+[node name="area_cutscene" type="Area2D" parent="."]
+position = Vector2(55, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_cutscene"]
+shape = SubResource("SegmentShape2D_84k1j")

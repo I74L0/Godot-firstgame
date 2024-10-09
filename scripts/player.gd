@@ -69,3 +69,6 @@ func take_damage(knockback_force:= Vector2.ZERO, duration := 0.25):
 		knockback_tween.parallel().tween_property(self, "knockback_vetor", Vector2.ZERO, duration)
 		animation.modulate = Color(1, 0, 0, 1)
 		knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
+
+func play_anim(animation_name):
+	$anim.play("run")

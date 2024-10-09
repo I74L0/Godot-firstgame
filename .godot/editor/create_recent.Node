@@ -1,13 +1,13 @@
 CollisionShape2D
 Area2D
+AnimatedSprite2D
 Sprite2D
+AnimationPlayer
 CharacterBody2D
 ColorRect
-AnimationPlayer
 RayCast2D
 Node2D
 RemoteTransform2D
-AnimatedSprite2D
 AnimatableBody2D
 ParallaxLayer
 ParallaxBackground
