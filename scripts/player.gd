@@ -34,16 +34,18 @@ func _physics_process(delta: float) -> void:
 	elif isJumping:
 		animation.play("jump")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		animation.play("idle")
-
+		if owner.get_node("cutscene").is_playing():
+			animation.stop()
+		else:
+			animation.play("idle")
+	
 	if !(Input.is_action_pressed("left") or Input.is_action_pressed("right")):
 		velocity.x = 0
 
 	if knockback_vetor != Vector2.ZERO:
 		velocity = knockback_vetor
-	move_and_slide()
 
+	move_and_slide()
 
 func _on_hurtbox_body_entered(body: Node2D) -> void:
 	if player_life < 0:
@@ -53,7 +55,6 @@ func _on_hurtbox_body_entered(body: Node2D) -> void:
 			take_damage(Vector2(-200, -200))
 		if $ray_left.is_colliding():
 			take_damage(Vector2(200, -200))
-			
 
 func follow_camera(camera):
 	var camera_path = camera.get_path()
@@ -71,4 +72,4 @@ func take_damage(knockback_force:= Vector2.ZERO, duration := 0.25):
 		knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
 
 func play_anim(animation_name):
-	$anim.play("run")
+	animation.play(animation_name)

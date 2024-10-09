@@ -1,15 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://4svsrlmbor1o"]
+[gd_scene load_steps=17 format=3 uid="uid://4svsrlmbor1o"]
 
-[ext_resource type="Script" path="res://levels/animacao/character_body_2d_2.gd" id="1_175d4"]
+[ext_resource type="Script" path="res://levels/animacao/anim_enemy.gd" id="1_h7ve2"]
 [ext_resource type="Texture2D" uid="uid://uuvwiha4vwml" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="1_mfvnl"]
 [ext_resource type="Texture2D" uid="uid://cebwlq7q3037f" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_e2jo7"]
 [ext_resource type="Texture2D" uid="uid://ci68c1wj5bui1" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="3_leycg"]
+[ext_resource type="Script" path="res://levels/animacao/anim_player.gd" id="3_yex0x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mctp"]
 size = Vector2(12, 12)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_61ec3"]
-size = Vector2(230, 36.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pp2pe"]
 atlas = ExtResource("2_e2jo7")
@@ -73,45 +71,54 @@ size = Vector2(14, 14)
 a = Vector2(4, -6)
 b = Vector2(4, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5ay2"]
+size = Vector2(254.5, 75)
+
 [node name="Animacao" type="Node2D"]
+position = Vector2(205, 90)
 
 [node name="cutscene" type="AnimationPlayer" parent="."]
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-position = Vector2(101, 17)
-script = ExtResource("1_175d4")
+[node name="anim_enemy" type="CharacterBody2D" parent="."]
+position = Vector2(123, 40)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_h7ve2")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
-position = Vector2(26, 6)
+[node name="Sprite2D" type="Sprite2D" parent="anim_enemy"]
 texture = ExtResource("1_mfvnl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="anim_enemy"]
 shape = SubResource("RectangleShape2D_2mctp")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(2, 43)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(123, 22.25)
-shape = SubResource("RectangleShape2D_61ec3")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="anim_player" type="CharacterBody2D" parent="."]
 position = Vector2(19, 20)
+collision_mask = 2
+script = ExtResource("3_yex0x")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="anim_player"]
 position = Vector2(12, 8)
 sprite_frames = SubResource("SpriteFrames_36wsb")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.756609
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="anim_player"]
 position = Vector2(12, 16)
 shape = SubResource("RectangleShape2D_kski0")
 
 [node name="area_cutscene" type="Area2D" parent="."]
 position = Vector2(55, 30)
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_cutscene"]
 shape = SubResource("SegmentShape2D_84k1j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(13, 31)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(81.25, 55)
+shape = SubResource("RectangleShape2D_t5ay2")

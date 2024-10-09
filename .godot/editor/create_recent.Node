@@ -1,4 +1,6 @@
 CollisionShape2D
+StaticBody2D
+TileMapLayer
 Area2D
 AnimatedSprite2D
 Sprite2D
@@ -10,5 +12,3 @@ Node2D
 RemoteTransform2D
 AnimatableBody2D
 ParallaxLayer
-ParallaxBackground
-Camera2D

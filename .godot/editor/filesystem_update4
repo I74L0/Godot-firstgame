@@ -3,5 +3,4 @@ res://shaders/movements_cloud.gdshader
 res://actors/player.tscn
 res://levels/animacao.tscn
 res://actors/enemy.tscn
-res://scripts/area_cutscene.gd
 res://scripts/player.gd
