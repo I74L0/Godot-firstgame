@@ -1,0 +1,125 @@
+[gd_scene load_steps=11 format=3 uid="uid://dp3mkr4nexvls"]
+
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_fbs6d"]
+[ext_resource type="Texture2D" uid="uid://uncmvqox8s2d" path="res://assets/Sprite Pack 2/9 - Snip Snap Crab/Movement_(Flip_image_back_and_forth) (32 x 32).png" id="1_gyp4r"]
+[ext_resource type="Texture2D" uid="uid://yirrf5tmslcs" path="res://assets/Sprite Pack 2/9 - Snip Snap Crab/Hurt (32 x 32).png" id="1_k77lw"]
+[ext_resource type="PackedScene" uid="uid://xuxfm7v2d8n6" path="res://prefabs/hitbox.tscn" id="2_mkffq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyer"]
+size = Vector2(14.6667, 24)
+
+[sub_resource type="Animation" id="Animation_5x2ft"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_gyp4r")]
+}
+
+[sub_resource type="Animation" id="Animation_ca2wi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_gyp4r")]
+}
+
+[sub_resource type="Animation" id="Animation_hk806"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_k77lw")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nuegd"]
+_data = {
+"RESET": SubResource("Animation_ca2wi"),
+"hurt": SubResource("Animation_hk806"),
+"walk": SubResource("Animation_5x2ft")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ufuy"]
+size = Vector2(15.3333, 2)
+
+[node name="boss" type="CharacterBody2D"]
+position = Vector2(39, 3)
+scale = Vector2(3, 3)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_fbs6d")
+
+[node name="texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_gyp4r")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.33334)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_tuyer")
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nuegd")
+}
+autoplay = "walk"
+
+[node name="wall_detector" type="RayCast2D" parent="."]
+position = Vector2(0, 9.33333)
+target_position = Vector2(-12.6667, 0)
+collision_mask = 2
+
+[node name="hitbox" parent="." instance=ExtResource("2_mkffq")]
+position = Vector2(0, -2)
+
+[node name="collsion" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_6ufuy")
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
