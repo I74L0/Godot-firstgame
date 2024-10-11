@@ -9,7 +9,6 @@ var player_life : int = 5
 var knockback_vetor := Vector2.ZERO
 
 @onready var animation := $anim as AnimatedSprite2D
-@onready var remote_transform := $remote as RemoteTransform2D
 
 func _physics_process(delta: float) -> void:
 	if !(owner.get_node("cutscene").is_playing()):
@@ -58,9 +57,9 @@ func _on_hurtbox_body_entered(body: Node2D) -> void:
 
 func follow_camera(camera):
 	var camera_path = camera.get_path()
-	remote_transform.remote_path = camera_path
+	$remote.remote_path = camera_path
 
-func take_damage(knockback_force:= Vector2.ZERO, duration := 0.25):
+func take_damage(knockback_force := Vector2.ZERO, duration : float = 0.25):
 	player_life -= 1
 	
 	if knockback_force != Vector2.ZERO:

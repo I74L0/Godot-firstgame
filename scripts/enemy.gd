@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -400.0
 
 @onready var wall_detector := $wall_detector as RayCast2D
 @onready var texture := $texture as Sprite2D

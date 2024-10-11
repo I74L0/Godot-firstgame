@@ -3,9 +3,8 @@ res://shaders/movements_cloud.gdshader
 res://actors/player.tscn
 res://levels/animacao.tscn
 res://actors/enemy.tscn
-res://scripts/player.gd
-res://scripts/world_01.gd
 res://actors/boss.tscn
+res://scripts/player.gd
 res://scripts/boss.gd
-res://scripts/hitbox.gd
-res://scripts/area_cutscene.gd
+res://scripts/enemy.gd
+res://scripts/world_01.gd
