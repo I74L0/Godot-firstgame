@@ -1,10 +1,11 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
 res://actors/player.tscn
-res://levels/animacao.tscn
-res://actors/enemy.tscn
 res://actors/boss.tscn
+res://actors/enemy.tscn
 res://scripts/player.gd
-res://scripts/boss.gd
-res://scripts/enemy.gd
+res://scripts/hitbox.gd
+res://prefabs/hitbox.tscn
 res://scripts/world_01.gd
+res://scripts/camera.gd
+res://scripts/boss.gd

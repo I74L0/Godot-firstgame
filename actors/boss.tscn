@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://xuxfm7v2d8n6" path="res://prefabs/hitbox.tscn" id="2_mkffq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyer"]
-size = Vector2(14.6667, 24)
+size = Vector2(14.3333, 24)
 
 [sub_resource type="Animation" id="Animation_ca2wi"]
 length = 0.001
@@ -90,17 +90,17 @@ _data = {
 size = Vector2(15.3333, 2)
 
 [node name="boss" type="CharacterBody2D"]
-position = Vector2(0, -48)
 scale = Vector2(3, 3)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_fbs6d")
 
 [node name="texture" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
 texture = ExtResource("1_gyp4r")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8.33334)
+position = Vector2(0, -7.167)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_tuyer")
 
@@ -110,16 +110,16 @@ libraries = {
 }
 autoplay = "walk"
 
-[node name="remote_boss" type="RemoteTransform2D" parent="."]
-position = Vector2(0, 5)
+[node name="remote" type="RemoteTransform2D" parent="."]
+position = Vector2(0, -5)
 
 [node name="wall_detector" type="RayCast2D" parent="."]
-position = Vector2(0, 12.6667)
+position = Vector2(0, -3.333)
 target_position = Vector2(-12.5, 0)
 collision_mask = 3
 
 [node name="hitbox" parent="." instance=ExtResource("2_mkffq")]
-position = Vector2(0, -2.66667)
+position = Vector2(0, -17.333)
 
 [node name="collsion" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, 2)

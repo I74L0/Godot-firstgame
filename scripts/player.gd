@@ -45,25 +45,27 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_hurtbox_body_entered(body: Node2D) -> void:
+	take_damage()
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if area.name == "hitbox":
+		velocity.y = JUMP_FORCE
+	else:
+		take_damage()
+
+func take_damage(duration : float = 0.25):
 	if player_life < 0:
 		queue_free()
-	else:
-		if $ray_right.is_colliding():
-			take_damage(Vector2(-200, -200))
-		elif $ray_left.is_colliding():
-			take_damage(Vector2(200, -200))
-		else:
-			take_damage(Vector2(0, -200))
-
-func follow_camera(camera):
-	var camera_path = camera.get_path()
-	$remote.remote_path = camera_path
-
-func take_damage(knockback_force := Vector2.ZERO, duration : float = 0.25):
 	player_life -= 1
 	
-	if knockback_force != Vector2.ZERO:
-		knockback_vetor = knockback_force
+	var vector: Vector2 = Vector2(0, -200)
+	if $ray_right.is_colliding():
+		vector = Vector2(-200, -200)
+	elif $ray_left.is_colliding():
+		vector = Vector2(200, -200)
+			
+	if vector != Vector2.ZERO:
+		knockback_vetor = vector
 		
 		var knockback_tween := get_tree().create_tween()
 		knockback_tween.parallel().tween_property(self, "knockback_vetor", Vector2.ZERO, duration)

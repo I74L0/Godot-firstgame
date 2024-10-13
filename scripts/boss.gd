@@ -29,10 +29,9 @@ func _physics_process(delta: float) -> void:
 
 func follow_camera(camera):
 	is_ready = true
-	print(type_string(typeof(camera)))
 	var camera_path = get_node(camera).get_path()
-	$remote_boss.remote_path = camera_path
-	print($remote_boss.remote_path)
+	$remote.remote_path = camera_path
+	print($remote.remote_path)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	get_node("anim").play("walk")
