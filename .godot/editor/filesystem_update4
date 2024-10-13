@@ -9,3 +9,5 @@ res://prefabs/hitbox.tscn
 res://scripts/world_01.gd
 res://scripts/camera.gd
 res://scripts/boss.gd
+res://levels/animacao.tscn
+res://levels/animacao/anim_player.gd

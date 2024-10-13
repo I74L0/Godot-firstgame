@@ -1,9 +1,9 @@
+CharacterBody2D
+Sprite2D
+AnimationPlayer
 TouchScreenButton
 CanvasLayer
-AnimationPlayer
-Sprite2D
 CollisionShape2D
-CharacterBody2D
 StaticBody2D
 TileMapLayer
 Area2D
@@ -12,4 +12,3 @@ ColorRect
 RayCast2D
 Node2D
 RemoteTransform2D
-AnimatableBody2D
