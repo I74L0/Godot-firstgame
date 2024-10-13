@@ -7,7 +7,7 @@ const SPEED: float = 2000
 @onready var texture := $texture as Sprite2D
 var direction := -1
 var boss_life: int = 3
-var is_ready : bool = false
+var is_ready: bool = false
 
 func _physics_process(delta: float) -> void:
 	if is_ready:
@@ -27,11 +27,8 @@ func _physics_process(delta: float) -> void:
 
 		move_and_slide()
 
-func follow_camera(camera):
+func set_ready():
 	is_ready = true
-	var camera_path = get_node(camera).get_path()
-	$remote.remote_path = camera_path
-	print($remote.remote_path)
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	get_node("anim").play("walk")
