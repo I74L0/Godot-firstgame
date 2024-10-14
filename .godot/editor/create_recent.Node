@@ -1,8 +1,8 @@
+TouchScreenButton
+CanvasLayer
 CharacterBody2D
 Sprite2D
 AnimationPlayer
-TouchScreenButton
-CanvasLayer
 CollisionShape2D
 StaticBody2D
 TileMapLayer

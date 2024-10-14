@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://cfpmen87g2xgg"]
+[gd_scene load_steps=35 format=4 uid="uid://cfpmen87g2xgg"]
 
 [ext_resource type="Texture2D" uid="uid://bh2us8a0sbrg5" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0l0xc"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_pe4kp"]
@@ -16,6 +16,12 @@
 [ext_resource type="Script" path="res://scripts/camera.gd" id="13_akdjp"]
 [ext_resource type="Script" path="res://scripts/area_cutscene.gd" id="14_ff2kc"]
 [ext_resource type="PackedScene" uid="uid://dp3mkr4nexvls" path="res://actors/boss.tscn" id="15_msmpp"]
+[ext_resource type="Texture2D" uid="uid://ba434mxp81ewn" path="res://assets/Mobile Icons/ui_buttons_arrow_left_NORMAL.png" id="17_cfjwk"]
+[ext_resource type="Texture2D" uid="uid://b7hxvsjm5n4g4" path="res://assets/Mobile Icons/ui_buttons_arrow_left_PRESSED.png" id="18_bouk7"]
+[ext_resource type="Texture2D" uid="uid://fwj5rbgi1xnq" path="res://assets/Mobile Icons/ui_buttons_arrow_right_NORMAL.png" id="19_2u4d7"]
+[ext_resource type="Texture2D" uid="uid://blwxr7gnd8fxi" path="res://assets/Mobile Icons/ui_buttons_arrow_right_PRESSED.png" id="20_de6tu"]
+[ext_resource type="Texture2D" uid="uid://bd0m6xsefq8h8" path="res://assets/Mobile Icons/ui_buttons_arrow_up_NORMAL.png" id="21_8jb8i"]
+[ext_resource type="Texture2D" uid="uid://cqpnyuxwu10xr" path="res://assets/Mobile Icons/ui_buttons_arrow_up_PRESSED.png" id="22_t6uja"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qq802"]
 shader = ExtResource("6_na7pt")
@@ -140,7 +146,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(361, 175)]
+"values": [Vector2(-162, 187)]
 }
 
 [sub_resource type="Animation" id="Animation_qsh4d"]
@@ -297,9 +303,9 @@ position = Vector2(72, 116)
 move_horizontal = false
 
 [node name="camera" type="Camera2D" parent="."]
-position = Vector2(15, 0)
+position = Vector2(-210, 198)
 offset = Vector2(0, -40)
-zoom = Vector2(1.4, 1.4)
+zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -309,7 +315,7 @@ editor_draw_drag_margin = true
 script = ExtResource("13_akdjp")
 
 [node name="player" parent="." instance=ExtResource("3_k4kl5")]
-position = Vector2(361, 175)
+position = Vector2(-162, 187)
 
 [node name="enemies" type="Node2D" parent="."]
 position = Vector2(1, -1)
@@ -340,5 +346,32 @@ debug_color = Color(0, 0, 1, 0.729412)
 libraries = {
 "": SubResource("AnimationLibrary_2amm1")
 }
+
+[node name="controls" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ui_left" type="TouchScreenButton" parent="controls"]
+position = Vector2(22, 232)
+scale = Vector2(2.3, 2.3)
+texture_normal = ExtResource("17_cfjwk")
+texture_pressed = ExtResource("18_bouk7")
+action = "left"
+visibility_mode = 1
+
+[node name="ui_right" type="TouchScreenButton" parent="controls"]
+position = Vector2(114, 232)
+scale = Vector2(2.3, 2.3)
+texture_normal = ExtResource("19_2u4d7")
+texture_pressed = ExtResource("20_de6tu")
+action = "right"
+visibility_mode = 1
+
+[node name="ui_jump" type="TouchScreenButton" parent="controls"]
+position = Vector2(542, 232)
+scale = Vector2(2.3, 2.3)
+texture_normal = ExtResource("21_8jb8i")
+texture_pressed = ExtResource("22_t6uja")
+action = "ui_accept"
+visibility_mode = 1
 
 [connection signal="body_entered" from="area_cutscene" to="area_cutscene" method="_on_body_entered"]
