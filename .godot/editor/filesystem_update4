@@ -1,2 +1,6 @@
-res://levels/world_01.tscn
+res://actors/enemy.tscn
 res://shaders/movements_cloud.gdshader
+res://levels/world_01.tscn
+res://actors/player.tscn
+res://scripts/player.gd
+res://levels/animacao.tscn

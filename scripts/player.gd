@@ -2,47 +2,39 @@ extends CharacterBody2D
 
 
 const SPEED: float = 200.0
-const JUMP_FORCE : float = -400.0
+const JUMP_FORCE : float = -330.0
 
-var isJumping : bool = false
 var player_life : int = 5
+var is_hurted : bool = false
 var knockback_vetor := Vector2.ZERO
+var direction: float
 
 @onready var animation := $anim as AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
 	if !(owner.get_node("cutscene").is_playing()):
-		# Add the gravity.
+		# Add gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
 		# Handle jump.
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_FORCE
-			isJumping = true
-		elif is_on_floor():
-			isJumping = false
 
 		# Get the input direction and handle the movement/deceleration
-		var direction := Input.get_axis("left", "right")
+		direction = Input.get_axis("left", "right")
 		if direction:
 			velocity.x = direction * SPEED
 			animation.scale.x = direction
-			if !isJumping:
-				animation.play("run")
-		elif isJumping:
-			animation.play("jump")
-		else:
-			animation.play("idle")
-	
 		# Stops jump movement mid-air
-		if !(Input.is_action_pressed("left") or Input.is_action_pressed("right")):
+		elif direction == 0:
 			velocity.x = 0
 		
 		# Handles knockback
 		if knockback_vetor != Vector2.ZERO:
 			velocity = knockback_vetor
 
+	_set_state()
 	move_and_slide()
 
 # Jump action for mobile
@@ -50,9 +42,6 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
 		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 			velocity.y = JUMP_FORCE
-			isJumping = true
-		elif is_on_floor():
-			isJumping = false
 
 # Checks for collision with bodies
 func _on_hurtbox_body_entered(body: Node2D) -> void:
@@ -84,6 +73,25 @@ func take_damage(duration : float = 0.25):
 		knockback_tween.parallel().tween_property(self, "knockback_vetor", Vector2.ZERO, duration)
 		animation.modulate = Color(1, 0, 0, 1)
 		knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
+	
+	is_hurted = true
+	await get_tree().create_timer(.3).timeout
+	is_hurted = false
+
+# Set animations on movement
+func _set_state():
+	var state = "idle"
+	
+	if !is_on_floor():
+		state = "jump"
+	elif direction != 0:
+		state = "run"
+		
+	if is_hurted:
+		state = "hurt"
+	
+	if animation.name != state:
+		animation.play(state)
 
 # Play player animation
 func play_anim(animation_name):
