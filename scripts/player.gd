@@ -98,3 +98,13 @@ func play_anim(animation_name):
 	animation.scale.x = 1
 	velocity.y = 0
 	animation.play(animation_name)
+
+
+func _on_head_collider_body_entered(body: Node2D) -> void:
+	if body.has_method("break_sprite"):
+		body.hitpoints -= 1
+		if body.hitpoints < 0:
+			body.break_sprite()
+		else:
+			body.animation_player.play("hit")
+			body.create_coin()

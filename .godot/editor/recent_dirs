@@ -1,3 +1,5 @@
+res://prefabs
+res://scripts
 C:/Users/Estagiarios/Documents/Godot-Projects/Godot-firstgame/builds
 C:/Program Files/Java/jdk-23/bin
 C:/Users/Estagiarios/AppData/Local/Android/Sdk
@@ -5,8 +7,6 @@ C:/Program Files/Java/jdk-23
 res://levels/animacao
 res://assets/player/animacao
 res://assets/player
-res://scripts
-res://prefabs
 res://assets/Seasonal Tilesets/1 - Grassland
 res://levels
 res://assets/Sprite Pack 2/2 - Mr. Mochi

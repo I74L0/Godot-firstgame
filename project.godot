@@ -50,6 +50,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_4="itens"
 2d_physics/layer_5="hitbox"
 2d_physics/layer_6="hurtbox"
+2d_physics/layer_7="head_collider"
 
 [rendering]
 
