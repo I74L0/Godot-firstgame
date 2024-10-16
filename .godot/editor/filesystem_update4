@@ -20,3 +20,5 @@ res://scripts/world_01.gd
 res://prefabs/coin.tscn
 res://prefabs/coin_rigid.tscn
 res://prefabs/moving_plataform.tscn
+res://prefabs/falling_plataform.tscn
+res://scripts/falling_plataform.gd

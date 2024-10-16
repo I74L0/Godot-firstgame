@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED: float = 200.0
 const JUMP_FORCE : float = -330.0
 
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player_life : int = 5
 var is_hurted : bool = false
 var knockback_vetor := Vector2.ZERO
@@ -36,6 +37,11 @@ func _physics_process(delta: float) -> void:
 
 	_set_state()
 	move_and_slide()
+	
+	for plataforms in get_slide_collision_count():
+		var collision = get_slide_collision(plataforms)
+		if collision.get_collider().has_method("has_collided_with"):
+			collision.get_collider().has_collided_with(collision, self)
 
 # Jump action for mobile
 func _input(event: InputEvent) -> void:

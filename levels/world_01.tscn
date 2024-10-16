@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://cfpmen87g2xgg"]
+[gd_scene load_steps=37 format=4 uid="uid://cfpmen87g2xgg"]
 
 [ext_resource type="Texture2D" uid="uid://bh2us8a0sbrg5" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0l0xc"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_pe4kp"]
@@ -9,6 +9,7 @@
 [ext_resource type="Shader" path="res://shaders/movements_cloud.gdshader" id="6_na7pt"]
 [ext_resource type="Texture2D" uid="uid://cxoq3jum5vkj0" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="6_t575r"]
 [ext_resource type="Texture2D" uid="uid://blykrkdwvai5y" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_q3tau"]
+[ext_resource type="PackedScene" uid="uid://fyrc0lqw7aer" path="res://prefabs/falling_plataform.tscn" id="7_y5kob"]
 [ext_resource type="Texture2D" uid="uid://cfahxjrnqcxdd" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="8_05c7h"]
 [ext_resource type="PackedScene" uid="uid://cyi5bou2o7j4p" path="res://prefabs/moving_plataform.tscn" id="10_drkfc"]
 [ext_resource type="PackedScene" uid="uid://botjv1ofnybl" path="res://prefabs/coin.tscn" id="11_euyd0"]
@@ -289,6 +290,9 @@ tile_set = SubResource("TileSet_7js8a")
 [node name="coin" parent="coins" instance=ExtResource("11_euyd0")]
 position = Vector2(114, 74)
 
+[node name="coin" parent="coins/coin" instance=ExtResource("11_euyd0")]
+position = Vector2(-82, -87)
+
 [node name="coin2" parent="coins" instance=ExtResource("11_euyd0")]
 position = Vector2(290, 42)
 
@@ -309,6 +313,15 @@ move_horizontal = false
 position = Vector2(612, 57)
 distance = 100
 move_horizontal = false
+
+[node name="falling-plataform" parent="plataforms" instance=ExtResource("7_y5kob")]
+position = Vector2(75, 73)
+
+[node name="falling-plataform2" parent="plataforms" instance=ExtResource("7_y5kob")]
+position = Vector2(76, 127)
+
+[node name="falling-plataform3" parent="plataforms" instance=ExtResource("7_y5kob")]
+position = Vector2(74, 19)
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(217, 187)
@@ -340,6 +353,17 @@ position = Vector2(331, 177)
 [node name="boss" parent="enemies" instance=ExtResource("15_msmpp")]
 position = Vector2(920, 25)
 
+[node name="boxes" type="Node2D" parent="."]
+
+[node name="break-box" parent="boxes" instance=ExtResource("23_d8etn")]
+position = Vector2(130, 128)
+
+[node name="break-box2" parent="boxes" instance=ExtResource("23_d8etn")]
+position = Vector2(247, 67)
+
+[node name="break-box3" parent="boxes" instance=ExtResource("23_d8etn")]
+position = Vector2(700, 122)
+
 [node name="area_cutscene" type="Area2D" parent="."]
 position = Vector2(632, 103)
 collision_layer = 0
@@ -354,17 +378,6 @@ debug_color = Color(0, 0, 1, 0.729412)
 libraries = {
 "": SubResource("AnimationLibrary_2amm1")
 }
-
-[node name="boxes" type="Node2D" parent="."]
-
-[node name="break-box" parent="boxes" instance=ExtResource("23_d8etn")]
-position = Vector2(130, 128)
-
-[node name="break-box2" parent="boxes" instance=ExtResource("23_d8etn")]
-position = Vector2(247, 67)
-
-[node name="break-box3" parent="boxes" instance=ExtResource("23_d8etn")]
-position = Vector2(700, 122)
 
 [node name="controls" type="CanvasLayer" parent="."]
 visible = false
