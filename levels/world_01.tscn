@@ -230,7 +230,7 @@ script = ExtResource("1_pe4kp")
 motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/05"]
-position = Vector2(0, -230)
+position = Vector2(-7, -267)
 scale = Vector2(1.5, 2.22115)
 texture = ExtResource("4_8bubj")
 centered = false

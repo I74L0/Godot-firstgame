@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cted6l2rra624"]
+
+[ext_resource type="Texture2D" uid="uid://cxk4vqdgwktwp" path="res://assets/Mini FX, Items & UI/Mini UI/Dialog_Box(16 x 16).png" id="1_x0pm4"]
+
+[node name="dialog_box" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_x0pm4")
