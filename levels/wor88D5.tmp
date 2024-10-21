@@ -412,12 +412,10 @@ action = "ui_accept"
 visibility_mode = 1
 
 [node name="warning_sign" type="Node2D" parent="."]
-position = Vector2(540, 64)
 script = ExtResource("25_ojmgr")
 
 [node name="texture" type="Sprite2D" parent="warning_sign"]
-visible = false
-position = Vector2(0, -14)
+position = Vector2(123, 142)
 texture = ExtResource("3_1tesa")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
@@ -426,6 +424,7 @@ region_rect = Rect2(0, 0, 16, 16)
 collision_layer = 2
 
 [node name="collision" type="CollisionShape2D" parent="warning_sign/area_sign"]
+position = Vector2(124, 160)
 shape = SubResource("RectangleShape2D_qxbeu")
 
 [connection signal="body_entered" from="area_cutscene" to="area_cutscene" method="_on_body_entered"]

@@ -1,15 +1,17 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1729336822
+::res://::1729431432
 export_presets.cfg::TextFile::-1::1729028015::0::1::::<><>::
 icon.svg::CompressedTexture2D::8765063415484890711::1729028015::1729336628::1::::<><>::
-::res://actors/::1729336545
+::res://actors/::1729428241
 boss.tscn::PackedScene::8270644682908924212::1728863157::0::1::::<><>::res://scripts/boss.gd<>uid://uncmvqox8s2d::::res://assets/Sprite Pack 2/9 - Snip Snap Crab/Movement_(Flip_image_back_and_forth) (32 x 32).png<>uid://yirrf5tmslcs::::res://assets/Sprite Pack 2/9 - Snip Snap Crab/Hurt (32 x 32).png<>uid://xuxfm7v2d8n6::::res://prefabs/hitbox.tscn
 enemy.tscn::PackedScene::5951468485662090718::1729028015::0::1::::<><>::res://scripts/enemy.gd<>uid://cbuna25ot8t3p::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png<>uid://el5gpobc85wd::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png<>uid://uuvwiha4vwml::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png<>uid://xuxfm7v2d8n6::::res://prefabs/hitbox.tscn
-player.tscn::PackedScene::5431675901413553052::1729336545::0::1::::<><>::res://scripts/player.gd<>uid://cebwlq7q3037f::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://gdowu7nwg6u6::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png<>uid://c46qv6ocanfbw::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png<>uid://ci68c1wj5bui1::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png
-::res://assets/::1729028015
-::res://assets/Mini FX, Items & UI/::1729336545
+player.tscn::PackedScene::5431675901413553052::1729428241::0::1::::<><>::res://scripts/player.gd<>uid://cebwlq7q3037f::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://gdowu7nwg6u6::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png<>uid://c46qv6ocanfbw::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png<>uid://ci68c1wj5bui1::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png
+::res://assets/::1729424209
+::res://assets/Fonts/::1729424232
+RevMiniPixel.ttf::FontFile::6609808658002049490::1729424152::1729424232::1::::<><>::
+::res://assets/Mini FX, Items & UI/::1729337181
 LICENSE.txt::TextFile::-1::1727915312::0::1::::<><>::
-::res://assets/Mini FX, Items & UI/Breakable Box/::1729336545
+::res://assets/Mini FX, Items & UI/Breakable Box/::1729337181
 ::res://assets/Mini FX, Items & UI/Common Pick-ups/::1729336629
 Coin (16 x 16).png::CompressedTexture2D::1353962578922070597::1727915312::1729336629::1::::<><>::
 Health_Kit (16 x 16).png::CompressedTexture2D::2737983586172460941::1727915312::1729336629::1::::<><>::
@@ -23,9 +25,9 @@ Cloud_Poof (16 x 16).png::CompressedTexture2D::6709084376154350968::1727915312::
 Dust (16 x 16).png::CompressedTexture2D::3705197111516443924::1727915312::1729336629::1::::<><>::
 Explosion_Poof (16 x 16).png::CompressedTexture2D::7835043949104621920::1727915312::1729336629::1::::<><>::
 Yellow_Sparkle (16 x 16).png::CompressedTexture2D::8835094140324798381::1727915312::1729336629::1::::<><>::
-::res://assets/Mini FX, Items & UI/Falling Plataform/::1729336630
-falling-platform-brown.png::CompressedTexture2D::5209672705483080361::1729336545::1729336630::1::::<><>::
-falling-platform-green.png::CompressedTexture2D::7266693289736136349::1729336545::1729336629::1::::<><>::
+::res://assets/Mini FX, Items & UI/Falling Plataform/::1729422714
+falling-platform-brown.png::CompressedTexture2D::5209672705483080361::1729337181::1729422714::1::::<><>::
+falling-platform-green.png::CompressedTexture2D::7266693289736136349::1729337181::1729422714::1::::<><>::
 ::res://assets/Mini FX, Items & UI/Food Items/::1729336630
 Bottled_Drinks (16 x 16).png::CompressedTexture2D::8320400983121868285::1727915312::1729336630::1::::<><>::
 Burger_&_Fries (16 x 16).png::CompressedTexture2D::3532449645668753712::1727915312::1729336630::1::::<><>::
@@ -39,8 +41,8 @@ Pancake_Stack (16 x 16).png::CompressedTexture2D::2608285815382723145::172791531
 Salad_Bowl (16 x 16).png::CompressedTexture2D::706647163038848935::1727915312::1729336629::1::::<><>::
 Sushi_Variety (16 x 16).png::CompressedTexture2D::2896805456968122484::1727915312::1729336629::1::::<><>::
 Wrapped_Candies (16 x 16).png::CompressedTexture2D::2201147987542635402::1727915312::1729336629::1::::<><>::
-::res://assets/Mini FX, Items & UI/Mini UI/::1729336951
-Dialog_Box(16 x 16).png::CompressedTexture2D::6409627688374218231::1729336898::1729336960::1::::<><>::
+::res://assets/Mini FX, Items & UI/Mini UI/::1729422714
+Dialog_Box(16 x 16).png::CompressedTexture2D::6409627688374218231::1729337181::1729422714::1::::<><>::
 Health_Indicator_Black_Outline (8 x 8).png::CompressedTexture2D::8379376223500420534::1727915312::1729336629::1::::<><>::
 Health_Indicator_White_Outline (8 x 8).png::CompressedTexture2D::8154767302341131626::1727915312::1729336629::1::::<><>::
 Mouse_Icons_Outlined (16 x 16).png::CompressedTexture2D::309438467715864495::1727915312::1729336629::1::::<><>::
@@ -175,32 +177,37 @@ Hurt (32 x 32).png::CompressedTexture2D::1702110126559581106::1727915313::172933
 Movement_(Flip_image_back_and_forth) (32 x 32).png::CompressedTexture2D::1430757775451190553::1727915313::1729336628::1::::<><>::
 Reaching_to_Pinch (32 x 32).png::CompressedTexture2D::8921274616056296707::1727915313::1729336628::1::::<><>::
 ::res://builds/::1729028015
-::res://levels/::1729336685
-animacao.tscn::PackedScene::2073943376651332230::1729336545::0::1::::<><>::res://levels/animacao/anim_enemy.gd<>uid://uuvwiha4vwml::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png<>res://levels/animacao/anim_player.gd<>uid://3suym866kj23::::res://assets/Player/animacao/IDLE.png<>uid://goor4kbpu813::::res://assets/Player/animacao/BLINK_1.png<>uid://5i1254i6jyve::::res://assets/Player/animacao/BLINK_2.png<>uid://gh4wb0jt4c17::::res://assets/Player/animacao/JUMP_1.png<>uid://cmvu08v30dkpk::::res://assets/Player/animacao/JUMP_2.png<>uid://212vgrqtteyr::::res://assets/Player/animacao/JUMP_3.png<>uid://cr47w0e742mmx::::res://assets/Player/animacao/JUMP_4.png<>uid://jykou1a6161::::res://assets/Player/animacao/JUMP_5.png<>uid://bfgm7yblwyhto::::res://assets/Player/animacao/JUMP_6.png<>uid://b2mn16w5uhp0n::::res://assets/Player/animacao/JUMP_7.png<>uid://bvfr8g755nlob::::res://assets/Player/animacao/JUMP_8.png<>uid://c874nbkm8ijr::::res://assets/Player/animacao/JUMP_9.png<>uid://djd8rguv80viq::::res://assets/Player/animacao/MOVE_1.png<>uid://chrcg7legxssf::::res://assets/Player/animacao/YAWN_1.png<>uid://d1hxdws7q174k::::res://assets/Player/animacao/YAWN_2.png
-world_01.tscn::PackedScene::5155487734221215014::1729336685::0::1::::<><>::uid://bh2us8a0sbrg5::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>res://scripts/world_01.gd<>uid://bxancjrqn4lyi::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://cjne55in8jooq::::res://actors/player.tscn<>uid://cakk65m5w1mph::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://dwyyxn8rlfxut::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>res://shaders/movements_cloud.gdshader<>uid://cxoq3jum5vkj0::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://blykrkdwvai5y::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://fyrc0lqw7aer::::res://prefabs/falling_plataform.tscn<>uid://cfahxjrnqcxdd::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png<>uid://cyi5bou2o7j4p::::res://prefabs/moving_plataform.tscn<>uid://botjv1ofnybl::::res://prefabs/coin.tscn<>uid://cq16202kcdfic::::res://actors/enemy.tscn<>res://scripts/camera.gd<>res://scripts/area_cutscene.gd<>uid://dp3mkr4nexvls::::res://actors/boss.tscn<>uid://ba434mxp81ewn::::res://assets/Mobile Icons/ui_buttons_arrow_left_NORMAL.png<>uid://b7hxvsjm5n4g4::::res://assets/Mobile Icons/ui_buttons_arrow_left_PRESSED.png<>uid://fwj5rbgi1xnq::::res://assets/Mobile Icons/ui_buttons_arrow_right_NORMAL.png<>uid://blwxr7gnd8fxi::::res://assets/Mobile Icons/ui_buttons_arrow_right_PRESSED.png<>uid://bd0m6xsefq8h8::::res://assets/Mobile Icons/ui_buttons_arrow_up_NORMAL.png<>uid://cqpnyuxwu10xr::::res://assets/Mobile Icons/ui_buttons_arrow_up_PRESSED.png<>uid://dr86vl8ae2ac8::::res://prefabs/break_box.tscn
+::res://levels/::1729428500
+animacao.tscn::PackedScene::2073943376651332230::1729428241::0::1::::<><>::res://levels/animacao/anim_enemy.gd<>uid://uuvwiha4vwml::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png<>res://levels/animacao/anim_player.gd<>uid://3suym866kj23::::res://assets/player/animacao/IDLE.png<>uid://goor4kbpu813::::res://assets/player/animacao/BLINK_1.png<>uid://5i1254i6jyve::::res://assets/player/animacao/BLINK_2.png<>uid://gh4wb0jt4c17::::res://assets/player/animacao/JUMP_1.png<>uid://cmvu08v30dkpk::::res://assets/player/animacao/JUMP_2.png<>uid://212vgrqtteyr::::res://assets/player/animacao/JUMP_3.png<>uid://cr47w0e742mmx::::res://assets/player/animacao/JUMP_4.png<>uid://jykou1a6161::::res://assets/player/animacao/JUMP_5.png<>uid://bfgm7yblwyhto::::res://assets/player/animacao/JUMP_6.png<>uid://b2mn16w5uhp0n::::res://assets/player/animacao/JUMP_7.png<>uid://bvfr8g755nlob::::res://assets/player/animacao/JUMP_8.png<>uid://c874nbkm8ijr::::res://assets/player/animacao/JUMP_9.png<>uid://djd8rguv80viq::::res://assets/player/animacao/MOVE_1.png<>uid://chrcg7legxssf::::res://assets/player/animacao/YAWN_1.png<>uid://d1hxdws7q174k::::res://assets/player/animacao/YAWN_2.png
+world_01.tscn::PackedScene::5155487734221215014::1729428500::0::1::::<><>::uid://bh2us8a0sbrg5::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>res://scripts/world_01.gd<>uid://bxancjrqn4lyi::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://ddxbxl1mhdvl1::::res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png<>uid://cjne55in8jooq::::res://actors/player.tscn<>uid://cakk65m5w1mph::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://dwyyxn8rlfxut::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>res://shaders/movements_cloud.gdshader<>uid://cxoq3jum5vkj0::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://blykrkdwvai5y::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://fyrc0lqw7aer::::res://prefabs/falling_plataform.tscn<>uid://cfahxjrnqcxdd::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png<>uid://cyi5bou2o7j4p::::res://prefabs/moving_plataform.tscn<>uid://botjv1ofnybl::::res://prefabs/coin.tscn<>uid://cq16202kcdfic::::res://actors/enemy.tscn<>res://scripts/camera.gd<>res://scripts/area_cutscene.gd<>uid://dp3mkr4nexvls::::res://actors/boss.tscn<>uid://ba434mxp81ewn::::res://assets/Mobile Icons/ui_buttons_arrow_left_NORMAL.png<>uid://b7hxvsjm5n4g4::::res://assets/Mobile Icons/ui_buttons_arrow_left_PRESSED.png<>uid://fwj5rbgi1xnq::::res://assets/Mobile Icons/ui_buttons_arrow_right_NORMAL.png<>uid://blwxr7gnd8fxi::::res://assets/Mobile Icons/ui_buttons_arrow_right_PRESSED.png<>uid://bd0m6xsefq8h8::::res://assets/Mobile Icons/ui_buttons_arrow_up_NORMAL.png<>uid://cqpnyuxwu10xr::::res://assets/Mobile Icons/ui_buttons_arrow_up_PRESSED.png<>uid://dr86vl8ae2ac8::::res://prefabs/break_box.tscn<>res://scripts/warning_sign.gd
 ::res://levels/animacao/::1728850268
 anim_enemy.gd::GDScript::-1::1728850268::0::1::::<>CharacterBody2D<>::
 anim_player.gd::GDScript::-1::1728850268::0::1::::<>CharacterBody2D<>::
-::res://prefabs/::1729336545
-box_pieces.tscn::PackedScene::8223854758115362544::1729336545::0::1::::<><>::res://scripts/box_pieces.gd
-break_box.tscn::PackedScene::8422517215999393469::1729336545::0::1::::<><>::uid://cbqvif8233sbx::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png<>res://scripts/break_box.gd
-coin.tscn::PackedScene::100260971001160325::1729336545::0::1::::<><>::uid://tj4tierab6t2::::res://assets/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png<>res://scripts/coin.gd<>uid://dx41yem1sx8pt::::res://assets/Mini FX, Items & UI/Effects/Yellow_Sparkle (16 x 16).png
-coin_rigid.tscn::PackedScene::340651929133130659::1729336545::0::1::::<><>::uid://botjv1ofnybl::::res://prefabs/coin.tscn
-falling_plataform.tscn::PackedScene::401526375586662457::1729336545::0::1::::<><>::res://scripts/falling_plataform.gd<>uid://dbsbm2t613p7b::::res://assets/Mini FX, Items & UI/Falling Plataform/falling-platform-green.png
+::res://prefabs/::1729428242
+box_pieces.tscn::PackedScene::8223854758115362544::1729337181::0::1::::<><>::res://scripts/box_pieces.gd
+break_box.tscn::PackedScene::8422517215999393469::1729337181::0::1::::<><>::uid://cbqvif8233sbx::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png<>res://scripts/break_box.gd
+coin.tscn::PackedScene::100260971001160325::1729337181::0::1::::<><>::uid://tj4tierab6t2::::res://assets/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png<>res://scripts/coin.gd<>uid://dx41yem1sx8pt::::res://assets/Mini FX, Items & UI/Effects/Yellow_Sparkle (16 x 16).png
+coin_rigid.tscn::PackedScene::340651929133130659::1729337181::0::1::::<><>::uid://botjv1ofnybl::::res://prefabs/coin.tscn
+dialog_box.tscn::PackedScene::6114925038376135199::1729428242::0::1::::<><>::res://scripts/dialog_box.gd<>uid://cxk4vqdgwktwp::::res://assets/Mini FX, Items & UI/Mini UI/Dialog_Box(16 x 16).png<>uid://c1f3t2281tqle::::res://assets/Fonts/RevMiniPixel.ttf
+falling_plataform.tscn::PackedScene::401526375586662457::1729427437::0::1::::<><>::res://scripts/falling_plataform.gd<>uid://dbsbm2t613p7b::::res://assets/Mini FX, Items & UI/Falling Plataform/falling-platform-green.png
 hitbox.tscn::PackedScene::1657037059263418053::1728850268::0::1::::<><>::res://scripts/hitbox.gd
 moving_plataform.tscn::PackedScene::6475712699778080973::1727915313::0::1::::<><>::uid://cbqvif8233sbx::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png<>res://scripts/moving_plataform.gd
-::res://scripts/::1729336545
+::res://scripts/::1729427425
 area_cutscene.gd::GDScript::-1::1728850268::0::1::::<>Area2D<>::
 boss.gd::GDScript::-1::1728850268::0::1::::<>CharacterBody2D<>::
-box_pieces.gd::GDScript::-1::1729336545::0::1::::<>RigidBody2D<>::
-break_box.gd::GDScript::-1::1729336545::0::1::::<>CharacterBody2D<>::
+box_pieces.gd::GDScript::-1::1729337181::0::1::::<>RigidBody2D<>::
+break_box.gd::GDScript::-1::1729337181::0::1::::<>CharacterBody2D<>::
 camera.gd::GDScript::-1::1728850268::0::1::::<>Camera2D<>::
 coin.gd::GDScript::-1::1727915313::0::1::::<>Area2D<>::
+dialog_box.gd::GDScript::-1::1729427425::0::1::::<>MarginContainer<>::
 enemy.gd::GDScript::-1::1728850268::0::1::::<>CharacterBody2D<>::
-falling_plataform.gd::GDScript::-1::1729336545::0::1::::<>AnimatableBody2D<>::
+falling_plataform.gd::GDScript::-1::1729337181::0::1::::<>AnimatableBody2D<>::
 hitbox.gd::GDScript::-1::1728850268::0::1::::<>Area2D<>::
-moving_plataform.gd::GDScript::-1::1729336545::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1729336545::0::1::::<>CharacterBody2D<>::
+moving_plataform.gd::GDScript::-1::1729337181::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1729337181::0::1::::<>CharacterBody2D<>::
+warning_sign.gd::GDScript::-1::1729426457::0::1::::<>Node2D<>::
 world_01.gd::GDScript::-1::1728850268::0::1::::<>Node2D<>::
-::res://shaders/::1729336685
-movements_cloud.gdshader::Shader::-1::1729336685::0::1::::<><>::
+::res://shaders/::1729428610
+movements_cloud.gdshader::Shader::-1::1729428610::0::1::::<><>::
+::res://singletons/::1729428449
+dialog_manager.gd::GDScript::-1::1729428449::0::1::::<>Node<>::
