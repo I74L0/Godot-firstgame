@@ -1,10 +1,2 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
-res://actors/player.tscn
-res://levels/animacao.tscn
-res://prefabs/coin.tscn
-res://levels/animacao/anim_enemy.gd
-res://levels/animacao/anim_player.gd
-res://scripts/player.gd
-res://scripts/spike_area.gd
-res://scripts/camera.gd

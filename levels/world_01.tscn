@@ -390,7 +390,6 @@ libraries = {
 }
 
 [node name="controls" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="ui_left" type="TouchScreenButton" parent="controls"]
 position = Vector2(22, 232)
