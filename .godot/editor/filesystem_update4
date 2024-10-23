@@ -6,3 +6,5 @@ res://prefabs/coin.tscn
 res://levels/animacao/anim_enemy.gd
 res://levels/animacao/anim_player.gd
 res://scripts/player.gd
+res://scripts/spike_area.gd
+res://scripts/camera.gd
