@@ -3,27 +3,45 @@
 [ext_resource type="Script" path="res://levels/animacao/anim_enemy.gd" id="1_h7ve2"]
 [ext_resource type="Texture2D" uid="uid://uuvwiha4vwml" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="1_mfvnl"]
 [ext_resource type="Script" path="res://levels/animacao/anim_player.gd" id="3_yex0x"]
-[ext_resource type="Texture2D" uid="uid://3suym866kj23" path="res://assets/player/animacao/IDLE.png" id="4_8rrad"]
-[ext_resource type="Texture2D" uid="uid://goor4kbpu813" path="res://assets/player/animacao/BLINK_1.png" id="5_g3u0t"]
-[ext_resource type="Texture2D" uid="uid://5i1254i6jyve" path="res://assets/player/animacao/BLINK_2.png" id="6_66cap"]
-[ext_resource type="Texture2D" uid="uid://gh4wb0jt4c17" path="res://assets/player/animacao/JUMP_1.png" id="7_vr5na"]
-[ext_resource type="Texture2D" uid="uid://cmvu08v30dkpk" path="res://assets/player/animacao/JUMP_2.png" id="8_xqjcf"]
-[ext_resource type="Texture2D" uid="uid://212vgrqtteyr" path="res://assets/player/animacao/JUMP_3.png" id="9_37ia5"]
-[ext_resource type="Texture2D" uid="uid://cr47w0e742mmx" path="res://assets/player/animacao/JUMP_4.png" id="10_2gbor"]
-[ext_resource type="Texture2D" uid="uid://jykou1a6161" path="res://assets/player/animacao/JUMP_5.png" id="11_5ovb6"]
-[ext_resource type="Texture2D" uid="uid://bfgm7yblwyhto" path="res://assets/player/animacao/JUMP_6.png" id="12_lw8bc"]
-[ext_resource type="Texture2D" uid="uid://b2mn16w5uhp0n" path="res://assets/player/animacao/JUMP_7.png" id="13_vlxt0"]
-[ext_resource type="Texture2D" uid="uid://bvfr8g755nlob" path="res://assets/player/animacao/JUMP_8.png" id="14_1c8h3"]
-[ext_resource type="Texture2D" uid="uid://c874nbkm8ijr" path="res://assets/player/animacao/JUMP_9.png" id="15_7raa6"]
-[ext_resource type="Texture2D" uid="uid://djd8rguv80viq" path="res://assets/player/animacao/MOVE_1.png" id="16_4i63h"]
-[ext_resource type="Texture2D" uid="uid://chrcg7legxssf" path="res://assets/player/animacao/YAWN_1.png" id="17_tk6y7"]
-[ext_resource type="Texture2D" uid="uid://d1hxdws7q174k" path="res://assets/player/animacao/YAWN_2.png" id="18_fopn1"]
+[ext_resource type="Texture2D" uid="uid://3suym866kj23" path="res://assets/Player/animacao/IDLE.png" id="4_8rrad"]
+[ext_resource type="Texture2D" uid="uid://goor4kbpu813" path="res://assets/Player/animacao/BLINK_1.png" id="5_g3u0t"]
+[ext_resource type="Texture2D" uid="uid://5i1254i6jyve" path="res://assets/Player/animacao/BLINK_2.png" id="6_66cap"]
+[ext_resource type="Texture2D" uid="uid://gh4wb0jt4c17" path="res://assets/Player/animacao/JUMP_1.png" id="7_vr5na"]
+[ext_resource type="Texture2D" uid="uid://cmvu08v30dkpk" path="res://assets/Player/animacao/JUMP_2.png" id="8_xqjcf"]
+[ext_resource type="Texture2D" uid="uid://cr47w0e742mmx" path="res://assets/Player/animacao/JUMP_4.png" id="10_2gbor"]
+[ext_resource type="Texture2D" uid="uid://jykou1a6161" path="res://assets/Player/animacao/JUMP_5.png" id="11_5ovb6"]
+[ext_resource type="Texture2D" uid="uid://bfgm7yblwyhto" path="res://assets/Player/animacao/JUMP_6.png" id="12_lw8bc"]
+[ext_resource type="Texture2D" uid="uid://b2mn16w5uhp0n" path="res://assets/Player/animacao/JUMP_7.png" id="13_vlxt0"]
+[ext_resource type="Texture2D" uid="uid://bvfr8g755nlob" path="res://assets/Player/animacao/JUMP_8.png" id="14_1c8h3"]
+[ext_resource type="Texture2D" uid="uid://c874nbkm8ijr" path="res://assets/Player/animacao/JUMP_9.png" id="15_7raa6"]
+[ext_resource type="Texture2D" uid="uid://djd8rguv80viq" path="res://assets/Player/animacao/MOVE_1.png" id="16_4i63h"]
+[ext_resource type="Texture2D" uid="uid://chrcg7legxssf" path="res://assets/Player/animacao/YAWN_1.png" id="17_tk6y7"]
+[ext_resource type="Texture2D" uid="uid://d1hxdws7q174k" path="res://assets/Player/animacao/YAWN_2.png" id="18_fopn1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mctp"]
 size = Vector2(12, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_36wsb"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vr5na")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xqjcf")
+}],
+"loop": true,
+"name": &"charging_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_2gbor")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 20.0,
 "texture": ExtResource("4_8rrad")
@@ -42,27 +60,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 10.0,
-"texture": ExtResource("4_8rrad")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_g3u0t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_66cap")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_vr5na")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_xqjcf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_vr5na")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_37ia5")
-}, {
 "duration": 1.0,
 "texture": ExtResource("6_66cap")
 }, {
@@ -99,9 +96,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_66cap")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -139,7 +136,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_g3u0t")
 }],
-"loop": true,
+"loop": false,
 "name": &"yawn",
 "speed": 5.0
 }]
@@ -160,8 +157,11 @@ size = Vector2(15, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rot0l"]
 size = Vector2(13, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hytkp"]
+
 [node name="Animacao" type="Node2D"]
 position = Vector2(205, 90)
+scale = Vector2(2, 2)
 
 [node name="cutscene" type="AnimationPlayer" parent="."]
 
@@ -217,8 +217,9 @@ script = ExtResource("3_yex0x")
 position = Vector2(0, -10)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_36wsb")
-animation = &"idle"
+animation = &"fall"
 autoplay = "idle"
+frame_progress = 1.0
 
 [node name="remote" type="RemoteTransform2D" parent="player"]
 
@@ -247,3 +248,14 @@ collision_mask = 4
 position = Vector2(-5, -5)
 target_position = Vector2(-7, 0)
 collision_mask = 4
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(78, -13)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-98, 26)
+shape = SubResource("RectangleShape2D_hytkp")
+
+[connection signal="animation_finished" from="player/sprite2d" to="player" method="_on_sprite_2d_animation_finished"]

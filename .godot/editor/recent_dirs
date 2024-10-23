@@ -1,3 +1,4 @@
+res://levels/animacao
 res://singletons
 res://scripts
 res://prefabs
@@ -5,7 +6,6 @@ C:/Users/Estagiarios/Documents/Godot-Projects/Godot-firstgame/builds
 C:/Program Files/Java/jdk-23/bin
 C:/Users/Estagiarios/AppData/Local/Android/Sdk
 C:/Program Files/Java/jdk-23
-res://levels/animacao
 res://assets/player/animacao
 res://assets/player
 res://assets/Seasonal Tilesets/1 - Grassland

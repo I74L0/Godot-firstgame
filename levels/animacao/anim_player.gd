@@ -1,78 +1,61 @@
 extends CharacterBody2D
 
 
-const SPEED: float = 200.0
-const JUMP_FORCE : float = -400.0
+const SPEED = 50.0
+const JUMP_FORCE = -450.0
 
-var isJumping : bool = false
-var player_life : int = 5
-var knockback_vetor := Vector2.ZERO
+var is_jumping: bool = false
+var direction: float
 
 @onready var animation := $sprite2d as AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
-	if !(owner.get_node("cutscene").is_playing()):
-		# Add the gravity.
-		if not is_on_floor():
-			velocity += get_gravity() * delta
-
-		# Handle jump.
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			velocity.y = JUMP_FORCE
-			isJumping = true
-		elif is_on_floor():
-			isJumping = false
-
-		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
-		var direction := Input.get_axis("left", "right")
-		if direction:
-			velocity.x = direction * SPEED
-			animation.scale.x = direction
-			if !isJumping:
-				animation.play("walk")
-		elif isJumping:
-			animation.play("jump")
-		else:
-			animation.play("idle")
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	else:
+		is_jumping = false
 	
-		if !(Input.is_action_pressed("left") or Input.is_action_pressed("right")):
-			velocity.x = 0
-
-		if knockback_vetor != Vector2.ZERO:
-			velocity = knockback_vetor
-
+	# Charges jump
+	if Input.is_action_pressed("ui_accept") and is_on_floor():
+		velocity.x = direction * SPEED * 0.1
+		is_jumping = true
+	
+	# Get the input direction and handle the movement/deceleration.
+	direction = Input.get_axis("left", "right")
+	if direction:
+		if !is_jumping:
+			velocity.x = direction * SPEED
+		animation.scale.x = direction / 10
+	# Stops jump movement mid-air
+	elif direction == 0:
+		velocity.x = 0
+	
+	# Execute jump
+	if Input.is_action_just_released("ui_accept") and is_on_floor():
+		velocity.y = JUMP_FORCE
+	
+	_set_state()
 	move_and_slide()
 
-func _on_hurtbox_body_entered(body: Node2D) -> void:
-	take_damage()
+# Set animations on movement
+func _set_state() -> void:
+	if animation.animation != "jump":
+		var state = "idle"
 
-func _on_hurtbox_area_entered(area: Area2D) -> void:
-	if area.name == "hitbox":
-		velocity.y = JUMP_FORCE
-	else:
-		take_damage()
-
-func take_damage(duration : float = 0.25):
-	if player_life < 0:
-		queue_free()
-	player_life -= 1
-	
-	var vector: Vector2 = Vector2(0, -200)
-	if $ray_right.is_colliding():
-		vector = Vector2(-200, -200)
-	elif $ray_left.is_colliding():
-		vector = Vector2(200, -200)
-			
-	if vector != Vector2.ZERO:
-		knockback_vetor = vector
+		if Input.is_action_pressed("ui_accept"):
+			state = "charging_jump"
+		elif Input.is_action_just_released("ui_accept"):
+			state = "jump"
+		elif !is_on_floor():
+			state = "fall"
+		elif direction != 0:
+			state = "walk"
 		
-		var knockback_tween := get_tree().create_tween()
-		knockback_tween.parallel().tween_property(self, "knockback_vetor", Vector2.ZERO, duration)
-		animation.modulate = Color(1, 0, 0, 1)
-		knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
+		if animation.animation != state:
+			animation.play(state)
 
-func play_anim(animation_name):
-	animation.scale.x = 1
-	velocity.y = 0
-	animation.play(animation_name)
+
+func _on_sprite_2d_animation_finished() -> void:
+	if animation.animation == "jump":
+		animation.play("idle")

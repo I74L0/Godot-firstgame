@@ -2,7 +2,7 @@ res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
 res://actors/player.tscn
 res://levels/animacao.tscn
-res://prefabs/dialog_box.tscn
-res://scripts/dialog_box.gd
-res://scripts/warning_sign.gd
-res://singletons/dialog_manager.gd
+res://prefabs/coin.tscn
+res://levels/animacao/anim_enemy.gd
+res://levels/animacao/anim_player.gd
+res://scripts/player.gd
