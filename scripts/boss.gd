@@ -5,6 +5,9 @@ const SPEED: float = 2000
 
 @onready var wall_detector := $wall_detector as RayCast2D
 @onready var texture := $texture as Sprite2D
+
+@export var enemy_score : int = 300
+
 var direction := -1
 var boss_life: int = 3
 var is_ready: bool = false

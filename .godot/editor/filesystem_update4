@@ -1,2 +1,9 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
+res://singletons/globals.gd
+res://actors/player.tscn
+res://levels/animacao.tscn
+res://scripts/hud_manager.gd
+res://scripts/coin.gd
+res://scripts/enemy.gd
+res://scripts/boss.gd
