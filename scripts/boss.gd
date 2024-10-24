@@ -8,11 +8,13 @@ const SPEED: float = 2000
 
 @export var enemy_score : int = 300
 
-var direction := -1
-var boss_life: int = 3
+var direction : int = -1
+var boss_life: int = 10
 var is_ready: bool = false
 
 func _physics_process(delta: float) -> void:
+	if boss_life == 0:
+		queue_free()
 	if is_ready:
 		 # Adds gravity
 		if not is_on_floor():
@@ -34,5 +36,6 @@ func set_ready():
 	is_ready = true
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
+	boss_life -= 1
 	get_node("anim").play("walk")
 	get_node("hitbox/collsion").set("disabled", false)

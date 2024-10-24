@@ -1,9 +1,13 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
-res://singletons/globals.gd
 res://actors/player.tscn
 res://levels/animacao.tscn
-res://scripts/hud_manager.gd
-res://scripts/coin.gd
-res://scripts/enemy.gd
 res://scripts/boss.gd
+res://singletons/globals.gd
+res://scripts/player.gd
+res://scripts/hud_manager.gd
+res://scripts/world_01.gd
+res://scripts/coin.gd
+res://actors/base_patrol.tscn
+res://scripts/rocket_cherry.gd
+res://scripts/hitbox.gd

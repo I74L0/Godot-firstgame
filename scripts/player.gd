@@ -5,12 +5,13 @@ const SPEED: float = 200.0
 const JUMP_FORCE : float = -330.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var player_life : int = 5
 var is_hurted : bool = false
 var knockback_vetor := Vector2.ZERO
 var direction: float
 
 @onready var animation := $anim as AnimatedSprite2D
+
+signal player_has_died()
 
 func _physics_process(delta: float) -> void:
 	if !(owner.get_node("cutscene").is_playing()):
@@ -62,9 +63,11 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 
 # Take damage
 func take_damage(duration : float = 0.25):
-	if player_life < 0:
+	if Globals.player_life <= 0:
 		queue_free()
-	player_life -= 1
+		emit_signal("player_has_died")
+		return
+	Globals.player_life -= 1
 	
 	var vector: Vector2 = Vector2(0, -200)
 	if $ray_right.is_colliding():

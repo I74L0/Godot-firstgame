@@ -1,4 +1,6 @@
 res://scripts
+res://assets/Sprite Pack 2/7 - Rocket Cherry
+res://actors
 res://singletons
 C:/Users/Estagiarios/Documents/Godot-Projects/Godot-firstgame/builds
 res://levels/animacao
@@ -11,7 +13,6 @@ res://assets/player
 res://assets/Seasonal Tilesets/1 - Grassland
 res://levels
 res://assets/Sprite Pack 2/2 - Mr. Mochi
-res://actors
 res://assets/Mini FX, Items & UI/Effects
 res://assets/Mini FX, Items & UI/Common Pick-ups
 res://shaders
