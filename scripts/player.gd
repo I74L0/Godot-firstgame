@@ -69,7 +69,7 @@ func take_damage(duration : float = 0.25):
 		return
 	Globals.player_life -= 1
 	
-	var vector: Vector2 = Vector2(0, -200)
+	var vector: Vector2 = Vector2(0, -420)
 	if $ray_right.is_colliding():
 		vector = Vector2(-200, -200)
 	elif $ray_left.is_colliding():

@@ -1,11 +1,10 @@
 extends Area2D
 
-@onready var spikes: Sprite2D = $spikes as Sprite2D
-@onready var collision: CollisionShape2D = $collision as CollisionShape2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	collision.shape.size = spikes.get_rect().size
+	if get_child(0) is Sprite2D:
+		get_child(1).shape.size = get_child(0).get_rect().size
 
 
 func _on_body_entered(body: Node2D) -> void:
