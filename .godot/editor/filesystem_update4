@@ -6,3 +6,7 @@ res://actors/base_patrol.tscn
 res://scripts/spike_area.gd
 res://scripts/player.gd
 res://scripts/area_damage.gd
+res://scripts/enemy.gd
+res://scripts/rocket_cherry.gd
+res://actors/enemy.tscn
+res://scripts/ground_enemy.gd

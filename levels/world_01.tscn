@@ -509,8 +509,8 @@ position = Vector2(1304, 144)
 position = Vector2(302, 106)
 
 [node name="moving_plataform4" parent="plataforms" instance=ExtResource("10_drkfc")]
-position = Vector2(1448, 153)
-distance = 50
+position = Vector2(1440, 153)
+distance = 60
 
 [node name="moving_plataform2" parent="plataforms" instance=ExtResource("10_drkfc")]
 position = Vector2(431, 73)
@@ -607,36 +607,38 @@ collision_layer = 2
 [node name="collision" type="CollisionShape2D" parent="warning_sign/area_sign"]
 shape = SubResource("RectangleShape2D_qxbeu")
 
-[node name="spike-area" type="Area2D" parent="."]
-position = Vector2(1144, 172)
-collision_layer = 2
-script = ExtResource("35_3d8an")
-
-[node name="spikes" type="Sprite2D" parent="spike-area"]
-texture_repeat = 2
-texture = ExtResource("27_53u6w")
-region_enabled = true
-region_rect = Rect2(0, 8, 215, 8)
-
-[node name="collision" type="CollisionShape2D" parent="spike-area"]
-shape = SubResource("RectangleShape2D_nj3aq")
-
-[node name="water-area" type="Area2D" parent="."]
-position = Vector2(1472, 192)
-collision_layer = 2
-script = ExtResource("35_3d8an")
-
-[node name="collision" type="CollisionShape2D" parent="water-area"]
-position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_1vgd8")
-
 [node name="player" parent="." instance=ExtResource("3_k4kl5")]
 position = Vector2(1016, 75)
 
 [node name="base_patrol" parent="." instance=ExtResource("38_vssfx")]
 position = Vector2(1633, 130)
 
+[node name="area-damage" type="Node2D" parent="."]
+
+[node name="spike-area" type="Area2D" parent="area-damage"]
+position = Vector2(1144, 172)
+collision_layer = 2
+script = ExtResource("35_3d8an")
+
+[node name="spikes" type="Sprite2D" parent="area-damage/spike-area"]
+texture_repeat = 2
+texture = ExtResource("27_53u6w")
+region_enabled = true
+region_rect = Rect2(0, 8, 215, 8)
+
+[node name="collision" type="CollisionShape2D" parent="area-damage/spike-area"]
+shape = SubResource("RectangleShape2D_nj3aq")
+
+[node name="water-area" type="Area2D" parent="area-damage"]
+position = Vector2(1472, 192)
+collision_layer = 2
+script = ExtResource("35_3d8an")
+
+[node name="collision" type="CollisionShape2D" parent="area-damage/water-area"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_1vgd8")
+
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="area_cutscene" to="area_cutscene" method="_on_body_entered"]
-[connection signal="body_entered" from="spike-area" to="spike-area" method="_on_body_entered"]
-[connection signal="body_entered" from="water-area" to="water-area" method="_on_body_entered"]
+[connection signal="body_entered" from="area-damage/spike-area" to="area-damage/spike-area" method="_on_body_entered"]
+[connection signal="body_entered" from="area-damage/water-area" to="area-damage/water-area" method="_on_body_entered"]
