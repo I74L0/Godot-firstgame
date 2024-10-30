@@ -9,7 +9,10 @@ const SPEED = 700.0
 
 var wall_detector
 var texture
-var direction := -1
+var direction : int = -1
+var can_spawn: bool = false
+var spawn_instance: PackedScene = null
+var spwan_instance_position
 
 func _apply_gravity(delta):
 	if not is_on_floor():
@@ -31,13 +34,13 @@ func flip_direction():
 		texture.flip_h = false
 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
+	print(anim_name)
 	if anim_name == "hurt":
 		Globals.score += enemy_score
 		queue_free()
 
 func kill_ground_enemy(anim_name: StringName) -> void:
-	if anim.anim_name == "hurt":
-		kill_and_score()
+	kill_and_score()
 
 func kill_air_enemy() -> void:
 	kill_and_score()
@@ -45,3 +48,10 @@ func kill_air_enemy() -> void:
 func kill_and_score():
 	Globals.score += enemy_score
 	queue_free()
+	if can_spawn:
+		spawn_new_enemy()
+
+func spawn_new_enemy():
+	var instance_scene = spawn_instance.instantiate()
+	get_tree().root.add_child(instance_scene)
+	instance_scene.global_position = spwan_instance_position.global_position

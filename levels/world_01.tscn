@@ -510,7 +510,7 @@ position = Vector2(302, 106)
 
 [node name="moving_plataform4" parent="plataforms" instance=ExtResource("10_drkfc")]
 position = Vector2(1440, 153)
-distance = 60
+distance = 80
 
 [node name="moving_plataform2" parent="plataforms" instance=ExtResource("10_drkfc")]
 position = Vector2(431, 73)

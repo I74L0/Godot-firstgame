@@ -1,14 +1,9 @@
 extends EnemyBase
 
-#@export var enemy_score: int = 200
+@onready var spawn_enemy: Marker2D = $"../spawn_enemy"
 
 func _ready() -> void:
+	spawn_instance = preload("res://actors/cherry.tscn")
+	spwan_instance_position = spawn_enemy
+	can_spawn = true
 	anim.animation_finished.connect(kill_air_enemy)
-
-func _on_hitbox_body_entered(body: Node2D) -> void:
-	anim.play("hurt")
-
-#func _on_anim_animation_finished() -> void:
-	#if anim.animation == "hurt":
-		#queue_free()
-		#Globals.score += enemy_score
