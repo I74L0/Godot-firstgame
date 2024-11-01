@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://cfpmen87g2xgg"]
+[gd_scene load_steps=57 format=4 uid="uid://cfpmen87g2xgg"]
 
 [ext_resource type="Texture2D" uid="uid://bh2us8a0sbrg5" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0l0xc"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_pe4kp"]
@@ -38,6 +38,7 @@
 [ext_resource type="Script" path="res://scripts/area_damage.gd" id="35_3d8an"]
 [ext_resource type="Texture2D" uid="uid://o4027ooecmdr" path="res://assets/Mini FX, Items & UI/Mini UI/Life-Counter-Icon.png" id="35_yhmeg"]
 [ext_resource type="PackedScene" uid="uid://bx63fo2l8qhgr" path="res://actors/base_patrol.tscn" id="38_vssfx"]
+[ext_resource type="PackedScene" uid="uid://bqjvg81abbjkm" path="res://prefabs/checkpoint.tscn" id="39_wntii"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qq802"]
 shader = ExtResource("6_na7pt")
@@ -637,6 +638,9 @@ script = ExtResource("35_3d8an")
 [node name="collision" type="CollisionShape2D" parent="area-damage/water-area"]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_1vgd8")
+
+[node name="checkpoint" parent="." instance=ExtResource("39_wntii")]
+position = Vector2(968, 176)
 
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="area_cutscene" to="area_cutscene" method="_on_body_entered"]

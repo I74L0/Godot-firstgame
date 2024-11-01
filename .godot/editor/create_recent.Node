@@ -1,5 +1,6 @@
 CollisionShape2D
 AnimatedSprite2D
+Area2D
 CharacterBody2D
 Node2D
 AnimationPlayer
@@ -11,4 +12,3 @@ Timer
 Label
 TextureRect
 HBoxContainer
-MarginContainer

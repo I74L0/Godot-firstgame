@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3h7dg50kbiha"
-path="res://.godot/imported/MOVING_pages-to-jpg-0003.jpg-2c619e14fb75468eb98b11354f29344f.ctex"
+uid="uid://dsv3nmrw1uh6n"
+path="res://.godot/imported/Checkpoint.png-50be7a392d1798770797a48a9be049f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Player/MOVING_pages-to-jpg-0003.jpg"
-dest_files=["res://.godot/imported/MOVING_pages-to-jpg-0003.jpg-2c619e14fb75468eb98b11354f29344f.ctex"]
+source_file="res://assets/Mini FX, Items & UI/Mini UI/Checkpoint.png"
+dest_files=["res://.godot/imported/Checkpoint.png-50be7a392d1798770797a48a9be049f2.ctex"]
 
 [params]
 

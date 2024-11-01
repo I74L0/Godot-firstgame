@@ -3,8 +3,9 @@ res://shaders/movements_cloud.gdshader
 res://levels/animacao.tscn
 res://actors/base_patrol.tscn
 res://actors/enemy.tscn
-res://scripts/ground_enemy.gd
-res://scripts/enemy.gd
-res://scripts/rocket_cherry.gd
 res://actors/cherry.tscn
-res://scripts/cherry.gd
+res://singletons/globals.gd
+res://scripts/world_01.gd
+res://scripts/camera.gd
+res://scripts/checkpoint.gd
+res://prefabs/checkpoint.tscn
