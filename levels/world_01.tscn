@@ -643,6 +643,8 @@ shape = SubResource("RectangleShape2D_1vgd8")
 position = Vector2(968, 176)
 
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]
+[connection signal="animation_finished" from="cutscene" to="." method="_on_cutscene_animation_finished"]
+[connection signal="animation_started" from="cutscene" to="." method="_on_cutscene_animation_started"]
 [connection signal="body_entered" from="area_cutscene" to="area_cutscene" method="_on_body_entered"]
 [connection signal="body_entered" from="area-damage/spike-area" to="area-damage/spike-area" method="_on_body_entered"]
 [connection signal="body_entered" from="area-damage/water-area" to="area-damage/water-area" method="_on_body_entered"]

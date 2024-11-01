@@ -4,6 +4,7 @@ extends Camera2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print(get_node_or_null("../player"))
 	if get_node_or_null("../player"):
 		position = node_to_follow.position
 

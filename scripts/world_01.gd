@@ -15,10 +15,6 @@ func _ready() -> void:
 	Globals.score = 0
 	Globals.player_life = 5
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func reload_game():
 	await get_tree().create_timer(1).timeout
 	var player = player_scene.instantiate()
@@ -27,3 +23,11 @@ func reload_game():
 	Globals.player.player_has_died.connect(reload_game)
 	Globals.respawn_player()
 	#get_tree().reload_current_scene()
+
+
+func _on_cutscene_animation_finished(anim_name: StringName) -> void:
+	Globals.can_move = true
+
+
+func _on_cutscene_animation_started(anim_name: StringName) -> void:
+	Globals.can_move = false

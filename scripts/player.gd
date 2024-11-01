@@ -14,7 +14,7 @@ var direction: float
 signal player_has_died()
 
 func _physics_process(delta: float) -> void:
-	if !(owner.get_node("cutscene").is_playing()):
+	if Globals.can_move:
 		# Add gravity.
 		if not is_on_floor():
 			velocity += get_gravity() * delta
