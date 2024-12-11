@@ -609,7 +609,7 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_qxbeu")
 
 [node name="player" parent="." instance=ExtResource("3_k4kl5")]
-position = Vector2(1016, 75)
+position = Vector2(60, 176)
 
 [node name="base_patrol" parent="." instance=ExtResource("38_vssfx")]
 position = Vector2(1633, 130)
@@ -639,8 +639,19 @@ script = ExtResource("35_3d8an")
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_1vgd8")
 
-[node name="checkpoint" parent="." instance=ExtResource("39_wntii")]
+[node name="checkpoints" type="Node2D" parent="."]
+
+[node name="checkpoint" parent="checkpoints" instance=ExtResource("39_wntii")]
 position = Vector2(968, 176)
+
+[node name="checkpoint2" parent="checkpoints" instance=ExtResource("39_wntii")]
+position = Vector2(97, 176)
+
+[node name="checkpoint3" parent="checkpoints" instance=ExtResource("39_wntii")]
+position = Vector2(544, 128)
+
+[node name="checkpoint4" parent="checkpoints" instance=ExtResource("39_wntii")]
+position = Vector2(1392, 144)
 
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]
 [connection signal="animation_finished" from="cutscene" to="." method="_on_cutscene_animation_finished"]

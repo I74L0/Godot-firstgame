@@ -1,8 +1,8 @@
+Node2D
 CollisionShape2D
 AnimatedSprite2D
 Area2D
 CharacterBody2D
-Node2D
 AnimationPlayer
 Marker2D
 RemoteTransform2D

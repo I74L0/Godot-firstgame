@@ -11,9 +11,6 @@ func _ready() -> void:
 	Globals.player = player
 	Globals.player.player_has_died.connect(reload_game)
 	control.time_is_up.connect(reload_game)
-	Globals.coins = 0
-	Globals.score = 0
-	Globals.player_life = 5
 
 func reload_game():
 	await get_tree().create_timer(1).timeout
@@ -21,6 +18,9 @@ func reload_game():
 	add_child(player)
 	Globals.player = player
 	Globals.player.player_has_died.connect(reload_game)
+	Globals.coins = 0
+	Globals.score = 0
+	Globals.player_life = 5
 	Globals.respawn_player()
 	#get_tree().reload_current_scene()
 

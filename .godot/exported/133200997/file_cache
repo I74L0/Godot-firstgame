@@ -1,8 +1,8 @@
 res://actors/boss.tscn::b987c83b5363e53003293946f298b1ee::1728909524::res://.godot/exported/133200997/export-7441e2ccd96da075000b30d46bfb1762-boss.scn
-res://actors/enemy.tscn::f6a801fa6a2f9b48c58e91c6fed8d2dc::1729076314::res://.godot/exported/133200997/export-61e27e8a0642b62a00179865da5b591c-enemy.scn
+res://actors/enemy.tscn::974c75b8615a137b8412327cfcb83d13::1733923768::res://.godot/exported/133200997/export-61e27e8a0642b62a00179865da5b591c-enemy.scn
 res://actors/player.tscn::b218abaff122c18e99471905351cb362::1729775598::res://.godot/exported/133200997/export-e86f95e5088e93066d258d9192ab0748-player.scn
-res://levels/animacao.tscn::a362a17fdb5908bc4006a7faae022fba::1729775599::res://.godot/exported/133200997/export-94989c3d84fc7646226e661e79f674a4-animacao.scn
-res://levels/world_01.tscn::2cbc4d9e8859fcd9b64a16b680f0eca7::1729777248::res://.godot/exported/133200997/export-bde9b0b2529c5f41f8c8416b7a30fd64-world_01.scn
+res://levels/animacao.tscn::44560f26f581037c851ff9a10d97d8f9::1733927090::res://.godot/exported/133200997/export-94989c3d84fc7646226e661e79f674a4-animacao.scn
+res://levels/world_01.tscn::921a4a2d0a25bf305ed522cd6290d5d7::1733927158::res://.godot/exported/133200997/export-bde9b0b2529c5f41f8c8416b7a30fd64-world_01.scn
 res://prefabs/coin.tscn::8168029253c5e07f3126d6f06fd67a5b::1729683875::res://.godot/exported/133200997/export-39bbc9b86d6ff472dbd608d74c2b3efc-coin.scn
 res://prefabs/hitbox.tscn::8c8cf2e1b0c8b64acbad4e722d944cb1::1728903382::res://.godot/exported/133200997/export-5e61a6088dbfe8a801584a03fb1f0aa8-hitbox.scn
 res://prefabs/moving_plataform.tscn::ba2e26dd56169e25037efee6c35a09a5::1729082794::res://.godot/exported/133200997/export-b04a4c0fdd378ae0eaf3206cdcf36ebb-moving_plataform.scn
@@ -11,4 +11,6 @@ res://prefabs/break_box.tscn::f2096dacc970f2177ac0db6450950c70::1729084951::res:
 res://prefabs/coin_rigid.tscn::808e55fbac67b260fac2428275614e49::1729083398::res://.godot/exported/133200997/export-25babce883a7bfbac2a281dc364fbf4f-coin_rigid.scn
 res://prefabs/dialog_box.tscn::4becd918476334c6692ab651a78c0034::1729683153::res://.godot/exported/133200997/export-67c1f312581d8577e5e9c471a97f3310-dialog_box.scn
 res://prefabs/falling_plataform.tscn::20d1e822189ea4d4ce1be75d2f65deb2::1729683153::res://.godot/exported/133200997/export-d85306936037917a862607c89c0836cb-falling_plataform.scn
-res://actors/base_patrol.tscn::9b5023810d15a806bc511f4ae4a19879::1729775599::res://.godot/exported/133200997/export-e0d3020715c99932779259cab5ea71e8-base_patrol.scn
+res://actors/base_patrol.tscn::22ffd1c458ce589a80550d318be14dc7::1733923768::res://.godot/exported/133200997/export-e0d3020715c99932779259cab5ea71e8-base_patrol.scn
+res://actors/cherry.tscn::d0bd7eb866b037fa2646864ac8946679::1733923768::res://.godot/exported/133200997/export-55d3083a63e128bc92cb1b23f4157234-cherry.scn
+res://prefabs/checkpoint.tscn::9a15d86391bddafed06d414d7a8fbfbe::1733927090::res://.godot/exported/133200997/export-a955a599a1d32bd2d2edd6a5cef192e9-checkpoint.scn
