@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://cfpmen87g2xgg"]
+[gd_scene load_steps=58 format=4 uid="uid://cfpmen87g2xgg"]
 
 [ext_resource type="Texture2D" uid="uid://bh2us8a0sbrg5" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_0l0xc"]
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_pe4kp"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://o4027ooecmdr" path="res://assets/Mini FX, Items & UI/Mini UI/Life-Counter-Icon.png" id="35_yhmeg"]
 [ext_resource type="PackedScene" uid="uid://bx63fo2l8qhgr" path="res://actors/base_patrol.tscn" id="38_vssfx"]
 [ext_resource type="PackedScene" uid="uid://bqjvg81abbjkm" path="res://prefabs/checkpoint.tscn" id="39_wntii"]
+[ext_resource type="PackedScene" uid="uid://soly32shuibn" path="res://prefabs/pause_menu.tscn" id="40_1v4sy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qq802"]
 shader = ExtResource("6_na7pt")
@@ -652,6 +653,8 @@ position = Vector2(544, 128)
 
 [node name="checkpoint4" parent="checkpoints" instance=ExtResource("39_wntii")]
 position = Vector2(1392, 144)
+
+[node name="pause_menu" parent="." instance=ExtResource("40_1v4sy")]
 
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]
 [connection signal="animation_finished" from="cutscene" to="." method="_on_cutscene_animation_finished"]

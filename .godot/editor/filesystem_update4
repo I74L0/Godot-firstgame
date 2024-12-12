@@ -1,8 +1,5 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
+res://prefabs/pause_menu.tscn
 res://levels/animacao.tscn
-res://prefabs/checkpoint.tscn
-res://scripts/camera.gd
-res://scripts/checkpoint.gd
-res://singletons/globals.gd
-res://scripts/world_01.gd
+res://scripts/pause_menu.gd
