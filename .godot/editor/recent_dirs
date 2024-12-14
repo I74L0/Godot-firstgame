@@ -1,6 +1,7 @@
 res://scripts
-res://themes
+res://shaders
 res://prefabs
+res://themes
 C:/Users/Estagiarios/Documents/Godot-Projects/Godot-firstgame/builds
 res://assets/Mini FX, Items & UI/Mini UI
 res://actors
@@ -17,4 +18,3 @@ res://levels
 res://assets/Sprite Pack 2/2 - Mr. Mochi
 res://assets/Mini FX, Items & UI/Effects
 res://assets/Mini FX, Items & UI/Common Pick-ups
-res://shaders

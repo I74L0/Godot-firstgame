@@ -1,5 +1,10 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
-res://prefabs/pause_menu.tscn
 res://levels/animacao.tscn
-res://scripts/pause_menu.gd
+res://prefabs/pause_menu.tscn
+res://scripts/goal.gd
+res://prefabs/goal.tscn
+res://shaders/transition_shader.gdshader
+res://scripts/color_rect.gd
+res://scripts/transition.gd
+res://levels/world_02.tscn
