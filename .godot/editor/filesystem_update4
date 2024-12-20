@@ -3,3 +3,5 @@ res://shaders/movements_cloud.gdshader
 res://shaders/transition_shader.gdshader
 res://scripts/world_01.gd
 res://singletons/globals.gd
+res://prefabs/title_screen.tscn
+res://scripts/title_screen.gd
