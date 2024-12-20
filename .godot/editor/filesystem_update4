@@ -1,12 +1,5 @@
 res://levels/world_01.tscn
 res://shaders/movements_cloud.gdshader
 res://shaders/transition_shader.gdshader
-res://prefabs/goal.tscn
-res://levels/world_02.tscn
-res://actors/player.tscn
-res://scripts/player.gd
-res://prefabs/coin.tscn
-res://scripts/coin.gd
-res://prefabs/break_box.tscn
-res://scripts/break_box.gd
-res://sounds/destroy_sfx.tscn
+res://scripts/world_01.gd
+res://singletons/globals.gd
