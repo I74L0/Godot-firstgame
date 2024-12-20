@@ -1,13 +1,13 @@
 AnimationPlayer
 HSeparator
-TextureRect
-Button
-HBoxContainer
 VBoxContainer
+Button
+TextureRect
+ColorRect
+HBoxContainer
 MarginContainer
 Marker2D
 AudioStreamPlayer
-ColorRect
 CanvasLayer
 CollisionShape2D
 Area2D

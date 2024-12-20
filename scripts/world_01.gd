@@ -27,7 +27,7 @@ func reload_game():
 	Globals.respawn_player()
 
 func game_over():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 func _on_cutscene_animation_finished(anim_name: StringName) -> void:
 	Globals.can_move = true

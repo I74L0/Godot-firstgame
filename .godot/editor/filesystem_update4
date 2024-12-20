@@ -5,3 +5,6 @@ res://scripts/world_01.gd
 res://singletons/globals.gd
 res://prefabs/title_screen.tscn
 res://scripts/title_screen.gd
+res://scenes/game_over.tscn
+res://scripts/game_over.gd
+res://scenes/title_screen.tscn

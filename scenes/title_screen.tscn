@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://m0wojlhxo1hv"]
 
-[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_nnbo0"]
-[ext_resource type="Texture2D" uid="uid://romyr87juuol" path="res://assets/Mini FX, Items & UI/Mini UI/title-screen.jpg" id="1_pbmib"]
-[ext_resource type="Texture2D" uid="uid://c46qv6ocanfbw" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="2_74glo"]
-[ext_resource type="Texture2D" uid="uid://cnui18qeolx0y" path="res://assets/Mini FX, Items & UI/Mini UI/game_logo.png" id="2_v8icp"]
-[ext_resource type="Theme" uid="uid://c6wnr730vhly6" path="res://themes/default_btns.tres" id="3_ljtmw"]
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_5w38o"]
+[ext_resource type="Texture2D" uid="uid://romyr87juuol" path="res://assets/Mini FX, Items & UI/Mini UI/title-screen.jpg" id="2_p0cma"]
+[ext_resource type="Texture2D" uid="uid://cnui18qeolx0y" path="res://assets/Mini FX, Items & UI/Mini UI/game_logo.png" id="3_hsakx"]
+[ext_resource type="Theme" uid="uid://c6wnr730vhly6" path="res://themes/default_btns.tres" id="4_58qbv"]
+[ext_resource type="Texture2D" uid="uid://c46qv6ocanfbw" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="5_jacby"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n6ogm"]
 
@@ -102,13 +102,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nnbo0")
+script = ExtResource("1_5w38o")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 640.0
 offset_bottom = 320.0
-texture = ExtResource("1_pbmib")
+texture = ExtResource("2_p0cma")
 expand_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -133,11 +133,11 @@ size_flags_horizontal = 6
 
 [node name="game_logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_v8icp")
+texture = ExtResource("3_hsakx")
 
 [node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_ljtmw")
+theme = ExtResource("4_58qbv")
 text = "START"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -146,7 +146,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_n6ogm")
 
 [node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_ljtmw")
+theme = ExtResource("4_58qbv")
 text = "CREDITS
 "
 
@@ -156,12 +156,12 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_ndr16")
 
 [node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_ljtmw")
+theme = ExtResource("4_58qbv")
 text = "QUIT GAME"
 
 [node name="mochi" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_74glo")
+texture = ExtResource("5_jacby")
 expand_mode = 2
 flip_h = true
 
